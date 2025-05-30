@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper show-category">
+        <div class="screen-backdrop"></div>
+        <div class="screen home-screen">
+            <div class="head-wrapper">
+                <div class="menu-btn">
+                    <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    viewBox="0 0 24 24" 
+                    fill="currentColor">
+                        <path d="M16 18V20H5V18H16ZM21 11V13H3V11H21ZM19 4V6H8V4H19Z"></path>
+                    </svg>
+                </div>
+                <div class="welcome">
+                    <div class="content">
+                        <h1>Hello Fred</h1>
+                        <p>Today you have <span class="totalTasks">5</span> tasks</p>
+                    </div>
+                    <div class="img">
+                        <div class="backdrop"></div>
+                        <img src="/img/user.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!--Categories-->
+
+            <div class="catgories-wrapper">
+                <div class="categories">
+                    <div class="category">
+                        <div class="left">
+                            <img src="img/user.png" alt="">
+                            <div class="content">
+                                <h1>Personal</h1>
+                                <p>5 tasks</p>
+                            </div>
+                        </div>
+                        <div class="options">
+                            <div class="toggle-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C11.175 3 10.5 3.675 10.5 4.5C10.5 5.325 11.175 6 12 6C12.825 6 13.5 5.325 13.5 4.5C13.5 3.675 12.825 3 12 3ZM12 18C11.175 18 10.5 18.675 10.5 19.5C10.5 20.325 11.175 21 12 21C12.825 21 13.5 20.325 13.5 19.5C13.5 18.675 12.825 18 12 18ZM12 10.5C11.175 10.5 10.5 11.175 10.5 12C10.5 12.825 11.175 13.5 12 13.5C12.825 13.5 13.5 12.825 13.5 12C13.5 11.175 12.825 10.5 12 10.5Z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!--Tasks screen-->
+
+        <div class="screen category-screen">
+            <div class="head-wrapper">
+                <div class="back-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22.0003 13.0001L22.0004 11.0002L5.82845 11.0002L9.77817 7.05044L8.36396 5.63623L2 12.0002L8.36396 18.3642L9.77817 16.9499L5.8284 13.0002L22.0003 13.0001Z"></path></svg>
+                </div>
+                <div class="options">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C11.175 3 10.5 3.675 10.5 4.5C10.5 5.325 11.175 6 12 6C12.825 6 13.5 5.325 13.5 4.5C13.5 3.675 12.825 3 12 3ZM12 18C11.175 18 10.5 18.675 10.5 19.5C10.5 20.325 11.175 21 12 21C12.825 21 13.5 20.325 13.5 19.5C13.5 18.675 12.825 18 12 18ZM12 10.5C11.175 10.5 10.5 11.175 10.5 12C10.5 12.825 11.175 13.5 12 13.5C12.825 13.5 13.5 12.825 13.5 12C13.5 11.175 12.825 10.5 12 10.5Z"></path></svg>
+                </div>
+            </div>
+            <div class="category-details">
+                <img src="img/user.png" alt="" id="category-img">
+                <div class="details">
+                    <p class="category-tasks">8 tasks</p>
+                    <h1 class="category-title">Personal</h1>
+                </div>
+            </div>
+            <div class="tasks-wrapper">
+                <div class="tasks">
+                    <div class="task-wrapper">
+                        <label for="task" class="task">
+                            <input type="checkbox" name="" id="task">
+                            <span class="checkmark">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.602 13.7599L13.014 15.1719L21.4795 6.7063L22.8938 8.12051L13.014 18.0003L6.65 11.6363L8.06421 10.2221L10.189 12.3469L11.6025 13.7594L11.602 13.7599ZM11.6037 10.9322L16.5563 5.97949L17.9666 7.38977L13.014 12.3424L11.6037 10.9322ZM8.77698 16.5873L7.36396 18.0003L1 11.6363L2.41421 10.2221L3.82723 11.6352L3.82604 11.6363L8.77698 16.5873Z"></path></svg>
+                            </span>
+                            <p>Buy a new car</p>
+                        </label>
+                        <div class="delete">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 8H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V8ZM6 10V20H18V10H6ZM9 12H11V18H9V12ZM13 12H15V18H13V12ZM7 5V3C7 2.44772 7.44772 2 8 2H16C16.5523 2 17 2.44772 17 3V5H22V7H2V5H7ZM9 4V5H15V4H9Z"></path></svg>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--Add task Btn-->
+        <div class="add-task-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.0001 10.9999L22.0002 10.9997L22.0002 12.9997L13.0001 12.9999L13.0001 21.9998L11.0001 21.9998L11.0001 12.9999L2.00004 13.0001L2 11.0001L11.0001 10.9999L11 2.00025L13 2.00024L13.0001 10.9999Z"></path></svg>
+        </div>
+
+        <!--backdrop-->
+        <div class="black-backdrop"></div>
+        <!--Add task form-->
+        
+        <div class="add-task">
+            <div class="add-task-backdrop"></div>
+            <h1 class="heading">Add Task</h1>
+            <div class="input-group">
+                <label for="task-input">task</label>
+                <input type="text" id="task-input" required/>
+            </div>
+            <div class="input-group">
+                <label for="category-select">Categeroy</label>
+               <select name="" id="category-select"></select>
+            </div>
+            <div class="btns">
+                <button class="cancel-btn">Cancel</button>
+                <button class="add-btn">Add</button>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
